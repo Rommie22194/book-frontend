@@ -29,3 +29,50 @@
 .small {
   font-size: 0.75rem;
 }
+
+/* Homepage styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+:root{
+  --bg:#0f1724;
+  --card:#ffffff;
+  --muted:#9aa4b2;
+  --accent:#7c5cff;
+}
+
+html,body,#root{height:100%;}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#071025 0%, #0f1724 60%);}
+
+.homepage .hero{
+  padding:4rem 1rem;
+  text-align:center;
+  color:#fff;
+  background: linear-gradient(90deg, rgba(124,92,255,0.12), rgba(255,255,255,0));
+}
+.hero-inner{max-width:900px;margin:0 auto}
+.hero-title{font-size:clamp(1.6rem, 4vw, 2.4rem);margin:0 0 .5rem}
+.hero-sub{margin:0 0 1.25rem;color:var(--muted)}
+.search input{width:100%;max-width:540px;padding:.75rem 1rem;border-radius:10px;border:none;box-shadow:0 6px 20px rgba(12,17,26,0.6);font-size:1rem}
+
+.container{max-width:1200px;margin:2rem auto;padding:0 1rem;color:#e6eef8}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem}
+.section-header h2{margin:0}
+.muted{color:var(--muted);margin:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem}
+.card{background:var(--card);color:#0b1220;border-radius:12px;overflow:hidden;box-shadow:0 6px 18px rgba(2,6,23,0.5);display:flex;flex-direction:column}
+.card .thumb{height:260px;background:#f4f6fb;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover}
+.card-body{padding:0.75rem 0.9rem}
+.card-title{font-size:0.95rem;margin:0 0 .35rem}
+.card-author{margin:0;color:var(--muted);font-size:0.85rem}
+.card-price{margin-top:.5rem;font-weight:700}
+
+.skeleton{min-height:320px; background:linear-gradient(90deg,#f3f4f6 0%, #eceff4 50%, #f3f4f6 100%); background-size:200% 100%; animation: shimmer 1.2s linear infinite}
+@keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+
+.error{color:#ffb3b3;background:rgba(255,255,255,0.03);padding:.5rem 1rem;border-radius:8px}
+
+@media (max-width:700px){
+  .card .thumb{height:200px}
+}
